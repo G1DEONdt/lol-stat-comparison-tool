@@ -1,8 +1,8 @@
 :root {
-    --main-colour: #0f2f47;
-    --bg-colour: #7e878f;
-    --confirm: rgba(0, 144, 0, 0.4);
-    --reject: rgba(255, 0, 0, 0.4);
+    --background-color: #272932;
+    --text-color: #FAE8EB;
+    --accent-one: #00A7E1;
+    --accent-two: #FF9B42;
 }
 
 * {
