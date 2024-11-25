@@ -37,12 +37,24 @@ h1 {
 }
 
 .content {
+    position: relative;
     width: 60%;
     height: 100%;
     margin: 24px;
+    overflow: hidden;
     /* background-color: #FAE8EB; */
     /* border: 1px solid white; */
 }
+
+.selected {
+    position: absolute;
+    top: 128px;
+    left: 24px;
+    border: 1px solid var(--accent-two);
+    height: 128px;
+    width: 128px;
+}
+
 
 .selection-grid {
     display: flex;
@@ -52,25 +64,46 @@ h1 {
     padding: 24px;
     width: 100%;
     height: 100%;
-    border: 1px solid white;
+}
+
+.selection-grid-title {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.selection-grid-title h2 {
+    color: var(--accent-two);
+    flex: 1
 }
 
 .selection-grid .search {
+    flex: 2;
+    max-width: 60%;
     padding: 6px;
 }
 
 .champion-grid {
-    border: 1px solid white;
+    /* border: 1px solid var(--accent-two); */
+    box-shadow: inset 0px 0px 50px 0px black;
     width: 100%;
     height: 100%;
     padding: 24px;
+    gap: 12px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    overflow: auto;
 }
 
 .champion {
-    border: 1px solid cyan;
-    width: 120px;
-    height: 120px;
+    width: 128px;
+    height: 128px;
+    /* border: 1px solid var(--accent-two); */
+    /* box-shadow: inset 0px 0px 25px 0px var(--text-color) */
+}
+
+.champion:hover {
+    cursor: pointer;
+    opacity: 0.75;
 }
