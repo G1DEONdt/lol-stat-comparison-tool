@@ -42,15 +42,12 @@ h1 {
     height: 100%;
     margin: 24px;
     overflow: hidden;
-    /* background-color: #FAE8EB; */
-    /* border: 1px solid white; */
 }
 
 .selected {
     position: absolute;
     top: 128px;
     left: 24px;
-    border: 1px solid var(--accent-two);
     height: 128px;
     width: 128px;
 }
@@ -64,6 +61,11 @@ h1 {
     padding: 24px;
     width: 100%;
     height: 100%;
+    /* display: none;  */
+}
+
+.selection-grid.hidden {
+    display: none;
 }
 
 .selection-grid-title {
@@ -106,4 +108,23 @@ h1 {
 .champion:hover {
     cursor: pointer;
     opacity: 0.75;
+}
+
+.stat-table td {
+    color: white;
+    border: 1px solid var(--accent-two);
+    padding: 8px 16px;
+}
+
+.stat-table th h3 {
+    color: white;
+}
+
+.stat-table img {
+    max-width: 48px;
+}
+
+.stat-table-champion-one-row td:nth-child(1),
+.stat-table-champion-two-row td:nth-child(1){
+    
 }

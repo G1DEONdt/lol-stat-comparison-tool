@@ -20,11 +20,6 @@ async function getData() {
       }
 }
 
-
 getData().then((data) => {
     instantiateGrid(data);
 })
-
-// For each champion (item in data)
-// Create a new div class="champion"
-// data.Aatrox.image.sprite
