@@ -6,7 +6,12 @@ const championIconOne = document.querySelectorAll(".champion-icon-one");
 const championIconTwo = document.querySelectorAll(".champion-icon-two");
 const statContainer = document.querySelector(".stat-container");
 let championOne;
-let championTwo
+let championTwo;
+
+
+const c1Attack = document.querySelector(".c1-atk");
+const c2Attack = document.querySelector(".c2-atk");
+
 
 export function instantiateGrid(data) {
     for (let champion in data.data) {
@@ -68,4 +73,22 @@ function loadIcons(championOne, championTwo){
 
 function renderStats() {
     statContainer.classList.remove("hidden");
+    let c1AttackArray = calculateAttack(championOne);
+    let c2AttackArray = calculateAttack(championTwo);
+}
+
+function calculateAttack(champion) {
+    let attackArray = [];
+    let baseAttack = champion.stats.attackdamage;
+    let growthFactor = champion.stats.attackdamageperlevel;
+
+    for (let currentLevel = 1; currentLevel <= 18; currentLevel++){
+        if (currentLevel == 1){
+            attackArray.push(baseAttack);
+        } else {
+            attackArray.push(baseAttack + growthFactor * (currentLevel - 1) * ((0.7025 + 0.0175 * (currentLevel - 1))));
+        }
+    }
+
+    return attackArray;
 }
