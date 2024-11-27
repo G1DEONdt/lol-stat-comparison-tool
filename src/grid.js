@@ -4,6 +4,7 @@ const selected = document.querySelector(".selected");
 const header = document.querySelector(".selection-header");
 const championIconOne = document.querySelectorAll(".champion-icon-one");
 const championIconTwo = document.querySelectorAll(".champion-icon-two");
+const statContainer = document.querySelector(".stat-container");
 let championOne;
 let championTwo
 
@@ -28,6 +29,7 @@ export function instantiateGrid(data) {
                 updateSelected(data.data[champion]);
                 championTwo = data.data[champion];
                 loadIcons(championOne, championTwo);
+                renderStats();
             }
         })
 
@@ -62,4 +64,8 @@ function loadIcons(championOne, championTwo){
     for (let i = 0; i < championIconTwo.length; i++) {
         championIconTwo[i].src = iconTwo;
     }
+}
+
+function renderStats() {
+    statContainer.classList.remove("hidden");
 }

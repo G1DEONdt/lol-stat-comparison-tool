@@ -39,9 +39,7 @@ h1 {
 .content {
     position: relative;
     width: 60%;
-    height: 100%;
-    margin: 24px;
-    overflow: hidden;
+    height: 85%;
 }
 
 .selected {
@@ -64,10 +62,6 @@ h1 {
     /* display: none;  */
 }
 
-.selection-grid.hidden {
-    display: none;
-}
-
 .selection-grid-title {
     width: 100%;
     display: flex;
@@ -86,7 +80,6 @@ h1 {
 }
 
 .champion-grid {
-    /* border: 1px solid var(--accent-two); */
     box-shadow: inset 0px 0px 50px 0px black;
     width: 100%;
     height: 100%;
@@ -110,21 +103,72 @@ h1 {
     opacity: 0.75;
 }
 
+
+.stat-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-container h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+    color: var(--accent-two);
+    text-align: center;
+}
+
+/* Table Styling */
+.stat h3 {
+    font-size: 1.2rem;
+    color: var(--accent-two);
+}
+
+.stat-table {
+    /* border: 1px solid white; */
+    border-collapse: collapse;
+    min-width: 100%;
+    font-size: 1rem;
+    color: white;
+    box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 6px 6px 0 0;
+}
+
+.stat-table thead tr {
+    background-color: var(--accent-two);
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.stat-table th,
 .stat-table td {
-    color: white;
-    border: 1px solid var(--accent-two);
-    padding: 8px 16px;
+    padding: 8px 12px;
 }
 
-.stat-table th h3 {
-    color: white;
+.stat-table tbody tr {
+    border-bottom: 1px solid var(--accent-two);
 }
 
-.stat-table img {
-    max-width: 48px;
+.stat-table tbody td {
+    text-align: center;
+    border-right: 1px solid var(--accent-two);
 }
 
-.stat-table-champion-one-row td:nth-child(1),
-.stat-table-champion-two-row td:nth-child(1){
-    
+.stat-table .icon {
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.stat-table tbody img {
+    width: 42px;
+    height: 42px;
+}
+
+.stat-container .stat-table {
+    margin-bottom: 24px;
+}
+
+.hidden {
+    display: none;
 }
