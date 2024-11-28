@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stat Comparison</title>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,8 +13,308 @@
     <header>
         <h1>LoL Stat Checker</h1>
     </header>
+
+    <div class="selected">
+    </div>
+
     <div class="content">
 
+        <div class="selection-grid">
+            <div class="selection-grid-title">
+                <h2 class="selection-header">First Champion: </h2>
+                <input type="text" class="search" placeholder="Aatrox">
+            </div>
+            <div class="champion-grid">
+            </div>
+        </div>
+
+        <div class="stat-container hidden">
+            <!-- OFFENSIVE STATS -->
+            <h2>Offense</h2>
+            <div class="stat">
+                <h3>Attack</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c1-atk">
+                            <td class="icon">
+                                <img class="champion-icon-one">
+                            </td>
+                        </tr>
+                        <tr class="c2-atk">
+                            <td class="icon">
+                                <img class="champion-icon-two">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stat">
+                <h3>Attack Speed</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c1-atkspd">
+                            <td class="icon">
+                                <img class="champion-icon-one">
+                            </td>
+                        </tr>
+                        <tr class="c2-atkspd">
+                            <td class="icon">
+                                <img class="champion-icon-two">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stat">
+                <h3>Attack Range</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c1-atkrange">
+                            <td class="icon">
+                                <img class="champion-icon-one">
+                            </td>
+                        </tr>
+                        <tr class="c2-atkrange">
+                            <td class="icon">
+                                <img class="champion-icon-two">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- DEFENSIVE STATS -->
+            <h2>Defence</h2>
+            <div class="stat">
+                <h3>HP</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c1-hp">
+                            <td class="icon">
+                                <img class="champion-icon-one">
+                            </td>
+                        </tr>
+                        <tr class="c2-hp">
+                            <td class="icon">
+                                <img class="champion-icon-two">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stat">
+                <h3>HP Regen per second</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c1-hpregen">
+                            <td class="icon">
+                                <img class="champion-icon-one">
+                            </td>
+                        </tr>
+                        <tr class="c2-hpregen">
+                            <td class="icon">
+                                <img class="champion-icon-two">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stat">
+                <h3>Armour</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c1-armour">
+                            <td class="icon">
+                                <img class="champion-icon-one">
+                            </td>
+                        </tr>
+                        <tr class="c2-armour">
+                            <td class="icon">
+                                <img class="champion-icon-two">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stat">
+                <h3>Magic Resist</h3>
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c1-mr">
+                            <td class="icon">
+                                <img class="champion-icon-one">
+                            </td>
+                        </tr>
+                        <tr class="c2-mr">
+                            <td class="icon">
+                                <img class="champion-icon-two">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 </html>
